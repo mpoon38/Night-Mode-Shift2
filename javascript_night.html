@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>JS Night Mode Conversion</title>
+
+    <style>
+        /* A little bit of CSS to make it look fancy */
+        body {
+            font-family: sans-serif;
+            transition: 0.5s; /* This makes the color change look smoother */
+            padding: 50px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">Welcome to the Page</h1>
+    <p>Click the button below to change the theme using a JavaScript Function.</p>
+
+    <button id="modeBtn" onclick="goDark()">Switch to Night Mode</button>
+
+    <script>
+        // THE RECIPE BOOK (The JavaScript)
+        function goDark() {
+            // 1. Change the background color of the whole body
+            document.body.style.backgroundColor = "#2c3e50"; 
+            
+            // 2. Change the text color so we can see it
+            document.body.style.color = "white";
+
+            // 3. Change the text inside the button
+            document.getElementById("modeBtn").innerHTML = "☀️ Switch to Day Mode";
+            
+            // 4. Change the button's own style
+            document.getElementById("modeBtn").style.backgroundColor = "white";
+            document.getElementById("modeBtn").style.color = "black";
+
+            // Console log helps us see it worked in the browser's "Inspect" tool
+            console.log("Night mode activated!");
+        }
+    </script>
+
+</body>
+</html>
